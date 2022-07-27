@@ -1,0 +1,48 @@
+<div class="content">
+    <h2 class="title">Task</h2>
+    <div class="input-content">
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Task name</mat-label>
+            <input matInput placeholder="Ex. Workout" #box (keyup)="changeValue(box.value)">
+        </mat-form-field>
+        <button mat-button aria-label="Example icon button with a home icon" class="add-button" (click)="addItem()">
+            <mat-icon>add</mat-icon>
+            Add
+        </button>
+    </div>
+    <div class="clear-content">
+        <button mat-button aria-label="Example icon button with a home icon" class="complete-button"
+            (click)="clearComplete()">
+            <mat-icon>check</mat-icon>
+            Clear Completed
+        </button>
+        <button mat-button aria-label="Example icon button with a home icon" class="clear-button"
+            (click)="clearItems()">
+            <mat-icon>delete</mat-icon>
+            Clear All
+        </button>
+    </div>
+
+    <div class="list-content">
+        <mat-list role="list">
+            <mat-list-item role="listitem" *ngFor="let item of todoItems$ | async; trackBy: trackById" class="listItem">
+                <div [ngClass]="item.isDone == true ? 'is-done' : 'isnot-done'">
+                    <div class="checkbox">
+                        <mat-checkbox [checked]="item.isDone" (change)="toggleItem(item)">
+
+                        </mat-checkbox>
+                    </div>
+                    <div class="label-checkbox">
+                        {{ item.title }}
+                    </div>
+                </div>
+                <button mat-button aria-label="Example icon button with a home icon" class="button-delete"
+                    (click)="deleteItem(item)">
+                    <mat-icon>close</mat-icon>
+                </button>
+            </mat-list-item>
+        </mat-list>
+    </div>
+
+
+</div>

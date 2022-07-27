@@ -1,0 +1,150 @@
+.content {
+    width: 100%;
+}
+
+.title {
+    margin-left: 30%;
+    padding-top: 5em;
+}
+
+.input-content {
+    width: 40%;
+    margin-left: 30%;
+    padding-top: 2em;
+    height: 55px;
+    display: flex;
+    text-align: center;
+}
+
+.example-full-width {
+    width: 80%;
+}
+
+.add-button {
+    width: 15%;
+    height: 100%;
+    margin-left: 5%;
+    color: white;
+    background-color: rgb(21, 153, 205);
+}
+
+.clear-content {
+    width: 40%;
+    margin-left: 30%;
+    padding-top: 1em;
+    height: 55px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.complete-button {
+    color: white;
+    background-color: rgb(114, 226, 83);
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.clear-button {
+    color: white;
+    background-color: rgb(231, 39, 32);
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 1em;
+}
+
+.list-content {
+    width: 40%;
+    margin-left: 30%;
+    padding-top: 1em;
+}
+
+.listItem {
+    margin-top: 2em;
+}
+
+.is-done {
+    height: 55px;
+    width: 50%;
+    display: flex;
+    text-decoration: line-through;
+    border: 2px solid green;
+    display: flex;
+    align-items: center;
+    background-color: rgb(112, 246, 112);
+}
+
+.isnot-done {
+    height: 55px;
+    width: 50%;
+    display: flex;
+    border: 2px solid rgb(164, 164, 164);
+    display: flex;
+    align-items: center;
+    background-color: rgb(235, 235, 235);
+}
+
+.label-checkbox {
+    margin-left: 1em;
+    font-size: 20px;
+}
+
+.checkbox {
+    margin-left: 0.5em;
+}
+
+.button-delete {
+    height: 59px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: rgb(231, 39, 32);
+}
+
+@media screen and (max-width: 480px) {
+    .title {
+        margin-left: 2em;
+        padding-top: 1em;
+    }
+
+    .input-content {
+        margin-top: 1em;
+        margin-left: 5%;
+        width: 90%;
+    }
+
+    .example-full-width {
+        width: 70%;
+    }
+
+    .add-button {
+        width: 25%;
+    }
+
+    .clear-content {
+        width: 90%;
+        margin-left: 5%;
+    }
+
+    .list-content {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .is-done {
+        width: 80%;
+    }
+
+    .isnot-done {
+        width: 80%;
+    }
+
+    .button-delete{
+        margin-left: 1em;
+    }
+}
